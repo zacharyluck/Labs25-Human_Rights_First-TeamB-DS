@@ -1,8 +1,8 @@
-# 1️⃣ Human Rights First Police Use of Force Map
+# Human Rights First Police Use of Force Map
 
-1️⃣ You can find the deployed project at [HRF Use of Force](https://main.d2njpi9j1s76mb.amplifyapp.com/).
+You can find the deployed project at [HRF Use of Force](https://main.d2njpi9j1s76mb.amplifyapp.com/).
 
-## 4️⃣ Contributors
+## Contributors
 
 
 |                                                      [Zach Luck](https://github.com/zacharyluck)                                                       |                                                       
