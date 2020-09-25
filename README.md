@@ -1,133 +1,88 @@
-🚫 Note: All lines that start with 🚫 are instructions and should be deleted before this is posted to your portfolio. This is intended to be a guideline, feel free to add your own flare to it.
+Police Use of Force API
 
-🚫 The numbers 1️⃣ through 5️⃣ next to each item represent the week that part of the docs needs to be comepleted by. Make sure to delete the numbers by the end of Labs.
+## Contributors
 
-🚫 Each student has a required minimum number of meaningful PRs each week per the rubric. Contributing to docs does NOT count as a PR to meet your weekly requirements.
-
-# 1️⃣ Human Rights First Police Use of Force Map
-
-1️⃣ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
-
-## 4️⃣ Contributors
-
-🚫Add contributor info below, make sure add images and edit the social links for each member. Add to or delete these place-holders as needed
-
-|                                                      [Student 1](https://github.com/)                                                       |                                                       [Student 2](https://github.com/)                                                        |                                                      [Student 3](https://github.com/)                                                       |                                                       [Student 4](https://github.com/)                                                        |                                                      [Student 5](https://github.com/)                                                       |
-| :-----------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------: |
-| [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/) |
-|                                [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/)                                |                            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/honda0306)                             |                          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Mister-Corn)                           |                          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/NandoTheessen)                           |                           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/wvandolah)                            |
-|                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                |                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                 |                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                |                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                 |                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                |
+| [API Design - Zachary Luck](https://github.com/zacharyluck) | [Modelling Engineer - Christopher Hartig](https://github.com/ChrisHartig44) |
+| :---: | :---: |
+| [<img src="https://i.imgur.com/ZyYw9Xc.png" width = "200" />](https://github.com/zacharyluck) | [<img src="https://i.imgur.com/fQGZNt1.jpg" width = "200" />](https://github.com/ChrisHartig44) |
+| [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/zacharyluck) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/ChrisHartig44) |
+| [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/zacharysluck/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/christopher-hartig/) |
 
 <br>
 <br>
-
-🚫 4️⃣ Optional examples of using images with links for your tech stack, make sure to change these to fit your project
 
 ![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
 ![React](https://img.shields.io/badge/react-v16.7.0--alpha.2-blue.svg)
 ![Typescript](https://img.shields.io/npm/types/typescript.svg?style=flat)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b5c4db1c-b10d-42c3-b157-3746edd9e81d/deploy-status)](netlify link goes in these parenthesis)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-
-🚫 more info on using badges [here](https://github.com/badges/shields)
 
 ## Project Overview
 
-1️⃣ [Trello Board](https://trello.com/b/QD7rXL7v/labs25hrfthierry)
+[Trello Board](https://trello.com/b/QD7rXL7v/labs25hrfthierry)
 
-1️⃣ [Product Canvas](https://whimsical.com/47hccoy2w65yxpK8dSfpwz)
+[Product Canvas](https://whimsical.com/47hccoy2w65yxpK8dSfpwz)
 
 
 Our team is developing an interactive map that identifies potential instances of police use of force across the United States of America for Human Rights First, an independent advocacy and action organization. 
 
  We're pulling data from similiar APIs(All locations V2 - https://raw.githubusercontent.com/2020PB/police-brutality/data_build/all-locations-v2.json, 846- https://api.846policebrutality.com/api/incidents) and from Twitter and Reddit. We want to identify aggregate these instances. 
 
-### 4️⃣ Key Features
+Key Features
 
-- feature one
-- feature two
-- feature three
-- feature four
-- feature five
+- Pulls and filters data from r/news
+- Runs automatically
+- Builds in Docker
+- Pushable to AWS
 
-## 1️⃣ Tech Stack
+## Tech Stack
 
-### Data Science API built using:
+### API built using:
 
-#### _Data Science goes here_
+- FastAPI
 
-🚫 Why did you choose this framework?
+Why did we choose this framework?
 
-- Works well with FastAPI
+- Built-in bootstrap
 - Recommended to us
 - Wanted to learn an in-demand framework
 
-🚫List the rest of the data science features and libraries in the same format as the framework above.
+Other modules used:
 - Pandas
-- scikit-learn
-- spacy
-- nltk
+- SciKit-Learn
+- SpaCy
+- newspaper3k
 - PRAW
-- Tweepy
+- fastapi-utils
 
-#### Data Science API deployed to AWS
+# API Breakdown
 
-#### [Back end](🚫link to back end repo here) built using:
+The API, once running, automatically pulls and processes data from Reddit through PRAW
 
-#### 🚫 back end framework goes here (link to BE REPO)
-
-- point one
-- point two
-- point three
-
-🚫 List the rest of the back end end features and libraries in the same format as the framework above
-
-# APIs
-
-## 2️⃣ Data Science API 
-
-We are sending json objects to the backend with information about instances of police use of force. This information includes location data (city, state, and geocode) and relevant details about the incident, like the type of force that was used.
-
-## 2️⃣ PRAW
+## PRAW
 
 PRAW, The Python Reddit API Wrapper, makes it easy for users to analyze Reddit data. We used PRAW to scrape Reddit for potential instances of police of force.
 
-## 3️⃣ Tweepy
+# Environment Variables
 
-Tweepy is a Python library that allows users to access the Twitter API. We used Tweepy to scan Twitter to find instances of police use of force. 
+In order for the app to function correctly, the user must set up their own environment variables. There should be a .env file containing the following inside the project folder locally before being built:
 
+```
+# These are the API keys generated when making a Reddit app
+* PRAW_CLIENT_ID
+* PRAW_CLIENT_SECRET
+* PRAW_USER_AGENT
+```
 
-# 3️⃣ Environment Variables
-
-In order for the app to function correctly, the user must set up their own environment variables. There should be a .env file containing the following:
-
-🚫These are just examples, replace them with the specifics for your app
-
-    
-    *  PRAW_CLIENT_ID  - keys for Reddit API
-    *  PRAW_CLIENT_SECRET - keys for Reddit API
-    *  PRAW_USER_AGENT - keys for Reddit API
-    *  TWEEPY_CONSUMER - keys for Twitter API
-    *  TWEEPY_SECRET - keys for Twitter API
-    *  TWEEPY_ACCESS - keys for Twitter API
-    *  TWEEPY_ACCESS_SECRET - keys for Twitter API
-
-# 5️⃣ Content Licenses
-
-🚫For all content - images, icons, etc, use this table to document permission of use. Remove the two placeholders and add you content to this table
+# Content Licenses
 
 | Image Filename | Source / Creator | License                                                                      |
 | -------------- | ---------------- | ---------------------------------------------------------------------------- |
 | doodles.png    | Nicole Bennett   | [Creative Commons](https://www.toptal.com/designers/subtlepatterns/doodles/) |
 | rings.svg      | Sam Herbert      | [MIT](https://github.com/SamHerbert/SVG-Loaders)                             |
 
-# 4️⃣ Testing
+# Installation Instructions
 
-🚫Document what you used for testing and why
-
-# 4️⃣ Installation Instructions
-
-🚫explain how to install the required dependencies to get this project up and running with yarn and NPM
+1. Clone the repository to your local machine
 
 ## Other Scripts
 
