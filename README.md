@@ -68,9 +68,9 @@ In order for the app to function correctly, the user must set up their own envir
 
 ```
 # These are the API keys generated when making a Reddit app
-* PRAW_CLIENT_ID
-* PRAW_CLIENT_SECRET
-* PRAW_USER_AGENT
+PRAW_CLIENT_ID
+PRAW_CLIENT_SECRET
+PRAW_USER_AGENT
 ```
 
 # Content Licenses
