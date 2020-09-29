@@ -80,18 +80,95 @@ In order for the app to function correctly, the user must set up their own envir
 | doodles.png    | Nicole Bennett   | [Creative Commons](https://www.toptal.com/designers/subtlepatterns/doodles/) |
 | rings.svg      | Sam Herbert      | [MIT](https://github.com/SamHerbert/SVG-Loaders)                             |
 
-# Installation Instructions
+# Deploy to AWS
 
-1. Clone the repository to your local machine
+[Get your AWS access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey).
 
-## Other Scripts
+Install [AWS Command Line Interface](https://aws.amazon.com/cli/).
 
-🚫replace these examples with your own
+[Configure AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config):
+```
+aws configure
+```
 
-    * typecheck - runs the TypeScript compiler
-    * build - creates a build of the application
-    * start - starts the production server after a build is created
-    * test - runs tests in **tests** directory \* eject - copy the configuration files and dependencies into the project so you have full control over them
+Install AWS Elastic Beanstalk CLI:
+```
+pip install pipx
+pipx install awsebcli
+```
+
+Follow [AWS EB docs](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/single-container-docker.html#single-container-docker.test-remote):
+
+Use Docker to build the image locally, test it locally, then push it to Docker Hub.
+
+```
+docker build -f project/Dockerfile -t YOUR-DOCKER-HUB-ID/YOUR-IMAGE-NAME ./project
+
+docker login
+
+docker push YOUR-DOCKER-HUB-ID/YOUR-IMAGE-NAME
+```
+
+Make sure you change `Dockerrun.aws.json`:
+
+```
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "YOUR-DOCKER-HUB-ID/YOUR-IMAGE-NAME", <-- CHANGE THIS VALUE
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "ContainerPort": "8000"
+    }
+  ],
+  "Command": "uvicorn app.main:app --workers 1 --host 0.0.0.0 --port 8000"
+}
+```
+
+Be sure to modify `YOUR-DOCKER-HUB-ID/YOUR-IMAGE-NAME` in the commands below to match what you entered above.
+
+Then use the EB CLI:
+```
+eb init -p docker YOUR-APP-NAME --region us-east-1
+
+eb create YOUR-APP-NAME
+
+eb open
+```
+
+To redeploy:
+
+- `docker build ...`
+- `docker push ...`
+- `eb deploy`
+- `eb open`
+
+## Build to test locally
+
+Create a seperate Dockerfile with the following code:
+
+```
+# pull uvicorn python image
+FROM tiangolo/uvicorn-gunicorn:python3.8
+
+# install python dependencies
+RUN python -m pip install --upgrade pip
+COPY ./requirements.txt .
+RUN pip install -r requirements.txt
+RUN python -m spacy download en_core_web_sm
+
+# add app
+COPY . .
+```
+
+and build it via
+
+```
+docker build -f NEW-DOCKER-FILE -t YOUR-DOCKER-HUB-ID/YOUR-IMAGE-NAME ./project
+docker run -d --name CONTAINER-NAME -p 80:80 YOUR-DOCKER-HUB-ID/YOUR-IMAGE-NAME
+```
 
 # Contributing
 
@@ -129,7 +206,3 @@ Remember that this project is licensed under the MIT license, and by submitting 
 ### Attribution
 
 These contribution guidelines have been adapted from [this good-Contributing.md-template](https://gist.github.com/PurpleBooth/b24679402957c63ec426).
-
-## Documentation
-
-See [Backend Documentation](🚫*link to your backend readme here*) for details on the backend of our project.
